@@ -7,10 +7,10 @@ Subject: [PATCH] convert to omxtypes.h
  dl/api/omxtypes.h | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/dl/api/omxtypes.h b/dl/api/omxtypes.h
+diff --git dl/api/omxtypes.h dl/api/omxtypes.h
 index b64e779..015bdf6 100644
---- a/dl/api/omxtypes.h
-+++ b/dl/api/omxtypes.h
+--- dl/api/omxtypes.h
++++ dl/api/omxtypes.h
 @@ -1,8 +1,8 @@
 -/**
 +﻿/**

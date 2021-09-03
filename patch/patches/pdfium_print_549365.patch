@@ -11,10 +11,10 @@ Subject: [PATCH] fixes pdfium
  third_party/lcms2-2.6/src/cmsvirt.c  | 18 +++++++++---------
  5 files changed, 23 insertions(+), 21 deletions(-)
 
-diff --git a/fpdfsdk/src/fpdfview.cpp b/fpdfsdk/src/fpdfview.cpp
+diff --git fpdfsdk/src/fpdfview.cpp fpdfsdk/src/fpdfview.cpp
 index a6c14206c..88c1b97c0 100644
---- a/fpdfsdk/src/fpdfview.cpp
-+++ b/fpdfsdk/src/fpdfview.cpp
+--- fpdfsdk/src/fpdfview.cpp
++++ fpdfsdk/src/fpdfview.cpp
 @@ -14,6 +14,7 @@
  #include "fpdfsdk/include/fsdk_mgr.h"
  #include "fpdfsdk/include/fsdk_rendercontext.h"
@@ -31,10 +31,10 @@ index a6c14206c..88c1b97c0 100644
  
    delete g_pCodecModule;
    g_pCodecModule = nullptr;
-diff --git a/public/fpdf_doc.h b/public/fpdf_doc.h
+diff --git public/fpdf_doc.h public/fpdf_doc.h
 index de05eb3a5..e1b0bf4ac 100644
---- a/public/fpdf_doc.h
-+++ b/public/fpdf_doc.h
+--- public/fpdf_doc.h
++++ public/fpdf_doc.h
 @@ -1,4 +1,4 @@
 -// Copyright 2014 PDFium Authors. All rights reserved.
 +﻿// Copyright 2014 PDFium Authors. All rights reserved.
@@ -50,10 +50,10 @@ index de05eb3a5..e1b0bf4ac 100644
  //          annotation dictionary).
  // Parameters:
  //          linkAnnot[in]       -   Handle to the link annotation.
-diff --git a/third_party/lcms2-2.6/src/cmscgats.c b/third_party/lcms2-2.6/src/cmscgats.c
+diff --git third_party/lcms2-2.6/src/cmscgats.c third_party/lcms2-2.6/src/cmscgats.c
 index 90174351e..982862fef 100644
---- a/third_party/lcms2-2.6/src/cmscgats.c
-+++ b/third_party/lcms2-2.6/src/cmscgats.c
+--- third_party/lcms2-2.6/src/cmscgats.c
++++ third_party/lcms2-2.6/src/cmscgats.c
 @@ -1,4 +1,4 @@
 -//---------------------------------------------------------------------------------
 +﻿//---------------------------------------------------------------------------------
@@ -78,10 +78,10 @@ index 90174351e..982862fef 100644
  
         {"WEIGHTING_FUNCTION", WRITE_PAIR},   // Indicates such functions as: the CIE standard observer functions used in the
                                 // calculation of various data parameters (2 degree and 10 degree), CIE standard
-diff --git a/third_party/lcms2-2.6/src/cmstypes.c b/third_party/lcms2-2.6/src/cmstypes.c
+diff --git third_party/lcms2-2.6/src/cmstypes.c third_party/lcms2-2.6/src/cmstypes.c
 index 06742b5ad..938ac1b2f 100644
---- a/third_party/lcms2-2.6/src/cmstypes.c
-+++ b/third_party/lcms2-2.6/src/cmstypes.c
+--- third_party/lcms2-2.6/src/cmstypes.c
++++ third_party/lcms2-2.6/src/cmstypes.c
 @@ -1,4 +1,4 @@
 -//---------------------------------------------------------------------------------
 +﻿//---------------------------------------------------------------------------------
@@ -128,10 +128,10 @@ index 06742b5ad..938ac1b2f 100644
  // first and last curve segments shall be specified in terms of a formula, whereas the other segments shall be
  // specified either in terms of a formula, or by a sampled curve.
  
-diff --git a/third_party/lcms2-2.6/src/cmsvirt.c b/third_party/lcms2-2.6/src/cmsvirt.c
+diff --git third_party/lcms2-2.6/src/cmsvirt.c third_party/lcms2-2.6/src/cmsvirt.c
 index b324c9902..8d6ff9f00 100644
---- a/third_party/lcms2-2.6/src/cmsvirt.c
-+++ b/third_party/lcms2-2.6/src/cmsvirt.c
+--- third_party/lcms2-2.6/src/cmsvirt.c
++++ third_party/lcms2-2.6/src/cmsvirt.c
 @@ -1,4 +1,4 @@
 -//---------------------------------------------------------------------------------
 +﻿//---------------------------------------------------------------------------------

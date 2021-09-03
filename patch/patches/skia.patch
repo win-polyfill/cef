@@ -8,10 +8,10 @@ Subject: [PATCH] Fixes sikia building with msvc2015/utf8
  src/sfnt/SkOTTable_name.cpp | 4 ++--
  2 files changed, 3 insertions(+), 3 deletions(-)
 
-diff --git a/src/core/SkEdge.cpp b/src/core/SkEdge.cpp
+diff --git src/core/SkEdge.cpp src/core/SkEdge.cpp
 index c64896f2e0..98c5072192 100644
---- a/src/core/SkEdge.cpp
-+++ b/src/core/SkEdge.cpp
+--- src/core/SkEdge.cpp
++++ src/core/SkEdge.cpp
 @@ -228,7 +228,7 @@ int SkQuadraticEdge::setQuadratic(const SkPoint pts[3], int shift)
  
      fWinding    = SkToS8(winding);
@@ -21,10 +21,10 @@ index c64896f2e0..98c5072192 100644
  
      /*
       *  We want to reformulate into polynomial form, to make it clear how we
-diff --git a/src/sfnt/SkOTTable_name.cpp b/src/sfnt/SkOTTable_name.cpp
+diff --git src/sfnt/SkOTTable_name.cpp src/sfnt/SkOTTable_name.cpp
 index 4e26759cdc..d71e6d5701 100644
---- a/src/sfnt/SkOTTable_name.cpp
-+++ b/src/sfnt/SkOTTable_name.cpp
+--- src/sfnt/SkOTTable_name.cpp
++++ src/sfnt/SkOTTable_name.cpp
 @@ -1,4 +1,4 @@
 -/*
 +﻿/*
