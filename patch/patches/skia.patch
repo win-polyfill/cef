@@ -1,0 +1,45 @@
+From 8fe55c668ae38e497ca4c511268a440273ebd7a1 Mon Sep 17 00:00:00 2001
+From: Yonggang Luo <luoyonggang@gmail.com>
+Date: Fri, 3 Sep 2021 07:02:15 +0000
+Subject: [PATCH] Fixes sikia building with msvc2015/utf8
+
+---
+ src/core/SkEdge.cpp         | 2 +-
+ src/sfnt/SkOTTable_name.cpp | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/core/SkEdge.cpp b/src/core/SkEdge.cpp
+index c64896f2e0..98c5072192 100644
+--- a/src/core/SkEdge.cpp
++++ b/src/core/SkEdge.cpp
+@@ -228,7 +228,7 @@ int SkQuadraticEdge::setQuadratic(const SkPoint pts[3], int shift)
+ 
+     fWinding    = SkToS8(winding);
+     //fCubicDShift only set for cubics
+-    fCurveCount = SkToS8(1 << shift);
++    fCurveCount = SkToS8((int32_t)(1 << shift));
+ 
+     /*
+      *  We want to reformulate into polynomial form, to make it clear how we
+diff --git a/src/sfnt/SkOTTable_name.cpp b/src/sfnt/SkOTTable_name.cpp
+index 4e26759cdc..d71e6d5701 100644
+--- a/src/sfnt/SkOTTable_name.cpp
++++ b/src/sfnt/SkOTTable_name.cpp
+@@ -1,4 +1,4 @@
+-/*
++﻿/*
+  * Copyright 2013 Google Inc.
+  *
+  * Use of this source code is governed by a BSD-style license that can be
+@@ -230,7 +230,7 @@ BCP47FromLanguageID[] = {
+     { 0x0411, "ja-JP" }, //Japanese
+     { 0x0412, "ko-KR" }, //Korean
+     { 0x0413, "nl-NL" }, //Dutch
+-    { 0x0414, "nb-NO" }, //Norwegian (Bokm�l)
++    { 0x0414, "nb-NO" }, //Norwegian (Bokmål)
+     { 0x0415, "pl-PL" }, //Polish
+     { 0x0416, "pt-BR" }, //Portuguese
+     { 0x0417, "rm-CH" }, //Romansh
+-- 
+2.33.0.windows.2
+

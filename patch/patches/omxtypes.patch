@@ -1,0 +1,27 @@
+From cdae7c0aa72ed2b4a9f91e9ee6e465759d54ec03 Mon Sep 17 00:00:00 2001
+From: Yonggang Luo <luoyonggang@gmail.com>
+Date: Fri, 3 Sep 2021 06:16:33 +0000
+Subject: [PATCH] convert to omxtypes.h
+
+---
+ dl/api/omxtypes.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/dl/api/omxtypes.h b/dl/api/omxtypes.h
+index b64e779..015bdf6 100644
+--- a/dl/api/omxtypes.h
++++ b/dl/api/omxtypes.h
+@@ -1,8 +1,8 @@
+-/**
++﻿/**
+  * File: omxtypes.h
+  * Brief: Defines basic Data types used in OpenMAX v1.0.2 header files.
+  *
+- * Copyright � 2005-2008 The Khronos Group Inc. All Rights Reserved. 
++ * Copyright © 2005-2008 The Khronos Group Inc. All Rights Reserved. 
+  *
+  * These materials are protected by copyright laws and contain material 
+  * proprietary to the Khronos Group, Inc.  You may use these materials 
+-- 
+2.33.0.windows.2
+

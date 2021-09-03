@@ -1,0 +1,38 @@
+From 924d0e268e4df839e9482b7c995ec01cbe01462b Mon Sep 17 00:00:00 2001
+From: Yonggang Luo <luoyonggang@gmail.com>
+Date: Fri, 3 Sep 2021 11:47:23 +0000
+Subject: [PATCH] Fixes ffmpeg_generated.gni for
+
+ffmpeg.lib(ffmpeg.wavdec.obj) : error LNK2001: unresolved external symbol _ff_w64_guid_data
+---
+ ffmpeg_generated.gni  | 1 +
+ ffmpeg_generated.gypi | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/ffmpeg_generated.gni b/ffmpeg_generated.gni
+index 195e9c0b64..52caa22f13 100644
+--- a/ffmpeg_generated.gni
++++ b/ffmpeg_generated.gni
+@@ -94,6 +94,7 @@ if ((is_android && current_cpu == "arm" && arm_use_neon && ffmpeg_branding == "C
+     "libavformat/rmsipr.c",
+     "libavformat/url.c",
+     "libavformat/vorbiscomment.c",
++    "libavformat/w64.c",
+     "libavformat/wavdec.c",
+     "libavutil/aes.c",
+     "libavutil/aes_ctr.c",
+diff --git a/ffmpeg_generated.gypi b/ffmpeg_generated.gypi
+index 06b415fad3..47e6b45fc8 100644
+--- a/ffmpeg_generated.gypi
++++ b/ffmpeg_generated.gypi
+@@ -583,6 +583,7 @@
+           'libavformat/rmsipr.c',
+           'libavformat/url.c',
+           'libavformat/vorbiscomment.c',
++          'libavformat/w64.c',
+           'libavformat/wavdec.c',
+           'libavutil/aes.c',
+           'libavutil/aes_ctr.c',
+-- 
+2.33.0.windows.2
+
